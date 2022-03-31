@@ -1,13 +1,11 @@
-@media (prefers-color-scheme: dark) {
-	html { filter: invert(1) hue-rotate(180deg); }
-	html img { filter: invert(1) hue-rotate(180deg); }
-	header { filter: invert(1) hue-rotate(180deg); }
-	nav { filter: invert(1) hue-rotate(180deg); }
-	nav a { color: white; }
-	.navbar.navbar-default.navbar-custom.navbar-fixed-top.is-fixed {
-		background-color: black;
-		border: none;
-	}
-	.navbar-custom.is-fixed .navbar-brand { color: white; }
-	.navbar-custom.is-fixed .nav li a { color: white; }
+html { filter: invert(1) hue-rotate(180deg); }
+html img { filter: invert(1) hue-rotate(180deg); }
+header { filter: invert(1) hue-rotate(180deg); }
+nav { filter: invert(1) hue-rotate(180deg); }
+nav a { color: white; }
+.navbar.navbar-default.navbar-custom.navbar-fixed-top.is-fixed {
+	background-color: black;
+	border: none;
 }
+.navbar-custom.is-fixed .navbar-brand { color: white; }
+.navbar-custom.is-fixed .nav li a { color: white; }
