@@ -1,0 +1,218 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="FabLabClub@QenaSTEM"><meta property="og:type" content="article"><meta property="og:image" content="fablabqenastem.github.io/img/home-bg-jeep.jpg"><meta property="twitter:image" content="fablabqenastem.github.io/img/home-bg-jeep.jpg"><meta name=title content="Chess-bird"><meta property="og:title" content="Chess-bird"><meta property="twitter:title" content="Chess-bird"><meta name=description content="A drone that uses various sensors to determine the properties of the scanned area"><meta property="og:description" content="A drone that uses various sensors to determine the properties of the scanned area"><meta property="twitter:description" content="A drone that uses various sensors to determine the properties of the scanned area"><meta property="twitter:card" content="summary"><meta name=keyword content><link rel="shortcut icon" href=/img/logo.svg><title>Chess-bird</title><link rel=canonical href=fablabqenastem.github.io/projects/chess-bird/><link rel=stylesheet href=/fablabqenastem.github.io/css/bootstrap.min.css><link rel=stylesheet href=/fablabqenastem.github.io/css/hugo-theme-cleanwhite.min.css><link rel=stylesheet href=/fablabqenastem.github.io/css/zanshang.css><link href=https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css rel=stylesheet type=text/css><link rel=stylesheet href=fablabqenastem.github.io/css/dark.css><link rel=stylesheet href=fablabqenastem.github.io/css/style.css><script src=/fablabqenastem.github.io/js/jquery.min.js></script>
+<script src=/fablabqenastem.github.io/js/bootstrap.min.js></script>
+<script src=/fablabqenastem.github.io/js/hux-blog.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=/fablabqenastem.github.io/>FabLabClub@QenaSTEM</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/fablabqenastem.github.io/>Projects</a></li><li><a href=/fablabqenastem.github.io/top/about/>ABOUT</a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic);function handleMagic(){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:url(/fablabqenastem.github.io/projects/chess-bird/chess-bird.jpg)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags><a class=tag href=/fablabqenastem.github.io/tags/esp title=ESP>ESP</a>
+<a class=tag href=/fablabqenastem.github.io/tags/drone title=Drone>Drone</a></div><h1>Chess-bird</h1><h2 class=subheading>The bird that sees chess!</h2><span class=meta>Posted by
+Ola Hamdy
+on
+Tuesday, January 11, 2022</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+post-container"><h1 id=overview>Overview</h1><p>The drone is made to satisfy the learning objectives of the FabLab club’s
+students. With various functions such as weather predicting and fire detecting,
+the drone’s purposes justify the students’ intention to help Egypt overcome
+many environmental crises.</p><p>Remotely controlled, the students took advantage of great tools like a flutter
+programming language, mainly to send data from an Esp32 chip. With a high
+accuracy level, the drone’s sensors (DHT11 - HC-SR04 - KY-026) draw a
+negligible range of errors, making it the best life-saver in most situations.</p><p>Supported by both batteries and PV panels, the drone is expected to store
+electricity in batteries in the mornings while working using the PV panels and
+use those batteries to supply the drone itself at night.</p><h1 id=goals>Goals</h1><p>The project is application of what the students learned in the club, so it matches:</p><ol><li>The aim of learning through practicing.</li><li>The desire of the students to help their country overcome many crises.</li><li>The purpose of getting a solid understanding of microcontrollers and chips.</li><li>The goal of the club in teaching the students how to code Embedded Systems and to work independently from scratch.</li></ol><h1 id=tools>Tools</h1><p>Building this project, the students worked on various concepts from drawing and
+sketching to coding and 3D CAD designing depending on these tools:</p><ul><li>ESP-wroom-32 chip
+<img src=/projects/chess-bird/esp.jpg alt="projects chess bird esp jpg"></li><li>4 DC Motors
+<img src=/projects/chess-bird/dc-motors.jpg alt="projects chess bird dc motors jpg"></li><li>DHT11 (Humidity Sensor)
+<img src=/projects/chess-bird/dht11.jpg alt="projects chess bird dht11 jpg"></li><li>KY-026 (Flame Sensor)
+<img src=/projects/chess-bird/ky-026.jpg alt="projects chess bird KY 026 jpg"></li><li>Double-paged PV panel
+<img src=/projects/chess-bird/pv.jpg alt="projects chess bird pv jpg"></li><li>Jumper wires
+<img src=/projects/chess-bird/jumper-wires.jpg alt="projects chess bird jumper wires jpg"></li></ul><h1 id=specifications>Specifications</h1><h2 id=led>Led</h2><p><img src=/projects/chess-bird/led-connections.jpg alt="projects chess bird led connections jpg"></p><h2 id=sensor>Sensor</h2><p><img src=/projects/chess-bird/sensor-connections.jpg alt="projects chess bird sensor connections jpg"></p><h1 id=functions>Functions</h1><h2 id=sensor-1>Sensor</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Arduino data-lang=Arduino><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&#34;DHT.h&#34;</span><span style=color:#ff79c6>
+</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#define echoPin 4
+</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#define trigPin 3
+</span></span></span><span style=display:flex><span><span style=color:#ff79c6>#define DHTPIN 2
+</span></span></span><span style=display:flex><span><span style=color:#ff79c6></span><span style=color:#8be9fd>long</span> duration;
+</span></span><span style=display:flex><span><span style=color:#8be9fd>float</span> distance;
+</span></span><span style=display:flex><span>DHT <span style=color:#50fa7b>dht</span>(DHT11, DHTTYPE);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8be9fd>void</span> <span style=color:#50fa7b>setup</span>() {
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>begin</span>(<span style=color:#bd93f9>9600</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(trigPin, <span style=color:#ff79c6>OUTPUT</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(echoPin, <span style=color:#ff79c6>INPUT</span>);
+</span></span><span style=display:flex><span>  dht.<span style=color:#50fa7b>begin</span>();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#8be9fd>void</span> <span style=color:#50fa7b>loop</span>() {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#8be9fd>float</span> h <span style=color:#ff79c6>=</span> dht.readHumidity();
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Read temperature as Celsius (the default)
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#8be9fd>float</span> t <span style=color:#ff79c6>=</span> dht.<span style=color:#50fa7b>readTemperature</span>();
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Read temperature as Fahrenheit (isFahrenheit = true)
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#8be9fd>float</span> f <span style=color:#ff79c6>=</span> dht.<span style=color:#50fa7b>readTemperature</span>(<span style=color:#8be9fd;font-style:italic>true</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Check if any reads failed and exit early (to try again).
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#ff79c6>if</span> (<span style=color:#50fa7b>isnan</span>(h) <span style=color:#ff79c6>||</span> <span style=color:#50fa7b>isnan</span>(t) <span style=color:#ff79c6>||</span> <span style=color:#50fa7b>isnan</span>(f)) {
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>println</span>(F(<span style=color:#f1fa8c>&#34;Failed to read from DHT sensor!&#34;</span>));
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>return</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Compute heat index in Fahrenheit (the default)
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#8be9fd>float</span> hif <span style=color:#ff79c6>=</span> dht.computeHeatIndex(f, h);
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Compute heat index in Celsius (isFahreheit = false)
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#8be9fd>float</span> hic <span style=color:#ff79c6>=</span> dht.computeHeatIndex(t, h, <span style=color:#8be9fd;font-style:italic>false</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(F(<span style=color:#f1fa8c>&#34;Humidity: &#34;</span>));
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(h);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(F(<span style=color:#f1fa8c>&#34;%  Temperature: &#34;</span>));
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(t);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(F(<span style=color:#f1fa8c>&#34;°C &#34;</span>));
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(f);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(F(<span style=color:#f1fa8c>&#34;°F  Heat index: &#34;</span>));
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(hic);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(F(<span style=color:#f1fa8c>&#34;°C &#34;</span>));
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(hif);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>println</span>(F(<span style=color:#f1fa8c>&#34;°F&#34;</span>));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>digitalWrite</span>(trigPin, <span style=color:#ff79c6>LOW</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>delayMicroseconds</span>(<span style=color:#bd93f9>2</span>);
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Sets the trigPin HIGH (ACTIVE) for 10 microseconds
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#50fa7b>digitalWrite</span>(trigPin, <span style=color:#ff79c6>HIGH</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>delayMicroseconds</span>(<span style=color:#bd93f9>10</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>digitalWrite</span>(trigPin, <span style=color:#ff79c6>LOW</span>);
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Reads the echoPin, returns the sound wave travel time in microseconds
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  duration <span style=color:#ff79c6>=</span> <span style=color:#50fa7b>pulseIn</span>(echoPin, <span style=color:#ff79c6>HIGH</span>);
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Calculating the distance
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  distance <span style=color:#ff79c6>=</span> duration <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>0.034</span> <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>2</span>; <span style=color:#6272a4>// Speed of sound wave divided by 2 (go and back)
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#6272a4>// Displays the distance on the Serial Monitor
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(<span style=color:#f1fa8c>&#34;Drone Height: &#34;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(distance <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>100</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>println</span>(<span style=color:#f1fa8c>&#34; m&#34;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>println</span>(<span style=color:#f1fa8c>&#34;</span><span style=color:#f1fa8c>\t</span><span style=color:#f1fa8c> ---- **** ----&#34;</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>delay</span>(<span style=color:#bd93f9>1000</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#8be9fd>float</span> sensorValue <span style=color:#ff79c6>=</span> <span style=color:#50fa7b>analogRead</span>(A0);
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>if</span> (sensorValue <span style=color:#ff79c6>&lt;</span> <span style=color:#bd93f9>570</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>println</span>(<span style=color:#f1fa8c>&#34;There is a fire out there! &#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(<span style=color:#f1fa8c>&#34;The value is: &#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(sensorValue);
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>println</span>(<span style=color:#f1fa8c>&#34; nm&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>delay</span>(<span style=color:#bd93f9>500</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>else</span>
+</span></span><span style=display:flex><span>  {
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>println</span>(<span style=color:#f1fa8c>&#34;There is no fire! Stay safe :)&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(<span style=color:#f1fa8c>&#34;The value is: &#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>print</span>(sensorValue);
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>Serial</span>.<span style=color:#50fa7b>println</span>(<span style=color:#f1fa8c>&#34; nm&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#50fa7b>delay</span>(<span style=color:#bd93f9>500</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=led-1>Led</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Arduino data-lang=Arduino><span style=display:flex><span><span style=color:#8be9fd>int</span> LEDs <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>4</span>;
+</span></span><span style=display:flex><span><span style=color:#6272a4>// 
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span><span style=color:#8be9fd>void</span> <span style=color:#50fa7b>setup</span>()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(LEDs, <span style=color:#ff79c6>OUTPUT</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8be9fd>void</span> <span style=color:#50fa7b>loop</span>()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>digitalWrite</span>(LEDs, <span style=color:#ff79c6>HIGH</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>delay</span>(<span style=color:#bd93f9>1000</span>); <span style=color:#6272a4>// Wait for 1000 millisecond(s)
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>  <span style=color:#50fa7b>digitalWrite</span>(LEDs, <span style=color:#ff79c6>LOW</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>delay</span>(<span style=color:#bd93f9>1000</span>); <span style=color:#6272a4>// Wait for 1000 millisecond(s)
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>}
+</span></span></code></pre></div><h2 id=dc-motors>DC Motors</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Arduino data-lang=Arduino><span style=display:flex><span><span style=color:#ff79c6>#include</span> <span style=color:#ff79c6>&lt;DC_Motor.h&gt;</span><span style=color:#ff79c6>
+</span></span></span><span style=display:flex><span><span style=color:#ff79c6></span>DC_Motor <span style=color:#50fa7b>MotorA</span>(<span style=color:#bd93f9>9</span>,A0, A1);
+</span></span><span style=display:flex><span>DC_Motor <span style=color:#50fa7b>MotorB</span>(<span style=color:#bd93f9>3</span>,A2, A3);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4>// MotorA
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> 
+</span></span><span style=display:flex><span><span style=color:#8be9fd>int</span> enA <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>9</span>;
+</span></span><span style=display:flex><span><span style=color:#8be9fd>int</span> in1 <span style=color:#ff79c6>=</span> A0;
+</span></span><span style=display:flex><span><span style=color:#8be9fd>int</span> in2 <span style=color:#ff79c6>=</span> A1;
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span><span style=color:#6272a4>// MotorB
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> 
+</span></span><span style=display:flex><span><span style=color:#8be9fd>int</span> enB <span style=color:#ff79c6>=</span> <span style=color:#bd93f9>3</span>;
+</span></span><span style=display:flex><span><span style=color:#8be9fd>int</span> in3 <span style=color:#ff79c6>=</span> A2;
+</span></span><span style=display:flex><span><span style=color:#8be9fd>int</span> in4 <span style=color:#ff79c6>=</span> A3;
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span><span style=color:#8be9fd>void</span> <span style=color:#50fa7b>setup</span>()
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>  <span style=color:#6272a4>// Set all the motor control pins to outputs
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> 
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(enA, <span style=color:#ff79c6>OUTPUT</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(enB, <span style=color:#ff79c6>OUTPUT</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(in1, <span style=color:#ff79c6>OUTPUT</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(in2, <span style=color:#ff79c6>OUTPUT</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(in3, <span style=color:#ff79c6>OUTPUT</span>);
+</span></span><span style=display:flex><span>  <span style=color:#50fa7b>pinMode</span>(in4, <span style=color:#ff79c6>OUTPUT</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span><span style=color:#8be9fd>void</span> <span style=color:#50fa7b>loop</span>() {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>if</span> (F)
+</span></span><span style=display:flex><span>  {
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// This is Forward
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> 
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// Set Motor A Forward
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> MotorA.set_speed(<span style=color:#bd93f9>40</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> MotorA.forward_with_set_speed();
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// Set Motor B Forward
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> MotorB.set_speed(<span style=color:#bd93f9>40</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> MotorB.forward_with_set_speed();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>else</span> <span style=color:#ff79c6>if</span> (B)
+</span></span><span style=display:flex><span>  {
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// This is Backward
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> 
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// Set Motor A Backward
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span>MotorA.set_speed(<span style=color:#bd93f9>80</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>MotorA.reverse_with_set_speed()
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// Set Motor B Backward
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> 
+</span></span><span style=display:flex><span> MotorB.set_speed(<span style=color:#bd93f9>80</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> MotorB.reverse_with_set_speed()  
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>if</span> (L)
+</span></span><span style=display:flex><span>  {
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// Move Left
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> <span style=color:#6272a4>// Set Motor A Forward
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> MotorA.set_speed(<span style=color:#bd93f9>40</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> MotorA.forward_with_set_speed();
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>else</span> <span style=color:#ff79c6>if</span> (R)
+</span></span><span style=display:flex><span>  {
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// Move Right
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> 
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// Map the number to a value of 255 maximum
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> 
+</span></span><span style=display:flex><span>    <span style=color:#6272a4>// Set Motor A Forward
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span> MotorA.set_speed(<span style=color:#bd93f9>40</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> MotorA.forward_with_set_speed();
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr><ul class=pager></ul></div><div class="col-lg-2 col-lg-offset-0
+visible-lg-block
+sidebar-container
+catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5><a href=/tags/>FEATURED TAGS</a></h5><div class=tags><a href=/fablabqenastem.github.io/tags/drone title=drone>drone</a>
+<a href=/fablabqenastem.github.io/tags/esp title=esp>esp</a></div></section><section><hr><h5>MEMBERS</h5><ul class=list-inline><li><a target=_blank href=/top/members/amr>Eng. Amr Abdelshafy</a></li><li><a target=_blank href=/top/members/gehad>Gehad Karam</a></li><li><a target=_blank href=https://marawan-mogeb.github.io/>Marawan Mogeb</a></li><li><a target=_blank href=/top/members/menna>Mennaallah Soliman</a></li><li><a target=_blank href=/top/members/ola>Ola Hamdy</a></li><li><a target=_blank href=https://salastro.github.io/>SalahDin Ahmed</a></li><li><a target=_blank href=/top/members/samah>Samah Mohamed</a></li><li><a target=_blank href=https://younis-tarek.github.io/>Younis Tarek</a></li><li><a target=_blank href=/top/members/youssef>Youssef Osman</a></li><li><a target=_blank href=/top/members/%e3%83%8f%e3%83%93%e3%83%bc%e3%83%90>ハビーバ</a></li></ul></section></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href=mailto:fablab@stemqena.moe.edu.eg><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://github.com/fablabclubqenastem><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; FabLabClub@QenaSTEM 2022</p></div></div></div></footer><script>function loadAsync(i,t){var n=document,s="script",e=n.createElement(s),o=n.getElementsByTagName(s)[0];e.src=i,t&&e.addEventListener("load",function(e){t(null,e)},!1),o.parentNode.insertBefore(e,o)}</script><script>$("#tag_cloud").length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js",function(){var e=document.querySelector("nav");e&&FastClick.attach(e)})</script><script type=text/javascript>function generateCatalog(e){_containerSelector="div.post-container";var r=$(_containerSelector),s,o,i,a,t,n=r.find("h1,h2,h3,h4,h5,h6");return $(e).html(''),n.each(function(){s=$(this).prop("tagName").toLowerCase(),a="#"+$(this).prop("id"),o=$(this).text(),t=$('<a href="'+a+'" rel="nofollow">'+o+"</a>"),i=$('<li class="'+s+'_nav"></li>').append(t),$(e).append(i)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(e){e.preventDefault(),$(".side-catalog").toggleClass("fold")}),loadAsync("/fablabqenastem.github.io/js/jquery.nav.js",function(){$(".catalog-body").onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script></body></html>
