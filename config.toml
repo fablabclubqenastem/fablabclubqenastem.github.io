@@ -90,6 +90,21 @@ home = ["HTML", "RSS"]
   #xing          = "https://www.xing.com/profile/yourxingid"
   #git           = "full profile url for git user"
   
+  [params.giscus]
+  giscus = true
+  data_repo = "fablabclubqenastem/fablabclubqenastem.github.io"
+  data_repo_id = "R_kgDOHFhNDQ"
+  data_category = "Announcements"
+  data_category_id = "DIC_kwDOHFhNDc4COlYn"
+  data_mapping = "title"
+  data_reactions_enabled = "1"
+  data_emit_metadata = "0"
+  data_input_position = "top"
+  data_theme = "dark_dimmed"
+  data_lang = "en"
+  data_loading = "lazy"
+  crossorigin = "anonymous"
+
   [[params.friend_link]]
   title = "Eng. Amr Abdelshafy"
   href = "/top/members/amr"
@@ -127,7 +142,7 @@ home = ["HTML", "RSS"]
   [[params.addtional_menus]]
   title =  "ABOUT"
   href =  "/top/about/"
-
+  
 # [outputFormats.Algolia]
 # baseName = "algolia"
 # isPlainText = true
