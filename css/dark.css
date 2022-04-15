@@ -9,3 +9,4 @@ nav a { color: white; }
 }
 .navbar-custom.is-fixed .navbar-brand { color: white; }
 .navbar-custom.is-fixed .nav li a { color: white; }
+.giscus iframe { filter: invert(1) hue-rotate(180deg); }
