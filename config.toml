@@ -78,7 +78,7 @@ home = ["HTML", "RSS"]
   # linkedin       = "https://www.linkedin.com/in/yourlinkedinid"
   # stackoverflow  = "https://stackoverflow.com/users/yourstackoverflowid"
   #instagram     = "full profile url in instagram"
-  github         = "https://github.com/fablabclubqenastem"
+  github         = "https://github.com/fabstemq"
   # wechat         = "your wechat qr code image"
   #medium        = "full profile url in medium"
   #slack         = "full workspace url in slack"
@@ -92,7 +92,7 @@ home = ["HTML", "RSS"]
   
   [params.giscus]
   giscus = true
-  data_repo = "fablabclubqenastem/fablabclubqenastem.github.io"
+  data_repo = "fabstemq/fabstemq.github.io"
   data_repo_id = "R_kgDOHFhNDQ"
   data_category = "Announcements"
   data_category_id = "DIC_kwDOHFhNDc4COlYn"
