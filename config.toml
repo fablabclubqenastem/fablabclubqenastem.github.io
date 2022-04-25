@@ -1,4 +1,4 @@
-baseurl = "https://fablabclubqenastem.github.io/"
+baseurl = "https://fabstemq.github.io/"
 title = "FabLabClub@QenaSTEM"
 theme = "hugo-theme-cleanwhite"
 languageCode = "en-us"
