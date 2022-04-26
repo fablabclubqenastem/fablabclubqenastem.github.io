@@ -12,7 +12,7 @@
   margin-bottom: 200px;
 }
 .post-heading h1, .post-heading h2, .post-heading span {
-  background-color: #2aafcb;
+  background-color: black;
   float: left;
   clear: both;
 }
@@ -27,4 +27,12 @@
   /*   0     1px 0 #000, */
   /*   -1px  1px 0 #000, */
   /*   -1px  0   0 #000; */
+}
+
+.navbar-brand, #huxblog_navbar:not(.in) {
+  text-shadow: 0px 0px 5px black;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  filter: drop-shadow(0px 0px 5px black)
 }
