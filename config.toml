@@ -69,8 +69,7 @@ home = ["HTML", "RSS"]
   custom_css = ["css/dark.css", "css/style.css", "css/header.css"]
 
   [params.social]
-  rss            = false
-  # rss = "/projects/index.xml"
+  # rss            = true
   email          = "fablab@stemqena.moe.edu.eg"
   #facebook      = "full profile url in facebook"
   #googleplus    = "full profile url in googleplus"
@@ -136,9 +135,9 @@ home = ["HTML", "RSS"]
   title = "ハビーバ"
   href = "/top/members/ハビーバ"
 
-  # [[params.addtional_menus]]
-  # title =  "ARCHIVE"
-  # href =  "/top/archive/"
+  [[params.addtional_menus]]
+  title =  "ARCHIVE"
+  href =  "/top/archive/"
   [[params.addtional_menus]]
   title =  "ABOUT"
   href =  "/top/about/"
