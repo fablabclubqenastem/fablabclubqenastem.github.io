@@ -69,7 +69,7 @@ home = ["HTML", "RSS"]
   custom_css = ["css/dark.css", "css/style.css", "css/header.css"]
 
   [params.social]
-  # rss            = true
+  rss            = true
   email          = "fablab@stemqena.moe.edu.eg"
   #facebook      = "full profile url in facebook"
   #googleplus    = "full profile url in googleplus"
